@@ -1,15 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 html {
 	color: lavender;
-	background-color: rgb(15, 15, 16);
-	font-family: Arial, Helvetica, sans-serif;
-	max-width: 800px;
+	background-color: #0f0f10;
+	font-family: "Nunito", sans-serif;
+	display: flex;
+	justify-content: center;
 }
 
 body {
-	background-color: rgb(31, 24, 33);
-	border: 2px solid blueviolet;
+	background-color: #1f1821;
+	border: 2px solid #7a2ac6;
 	border-radius: 20px;
-	margin: 4%;
+	margin: 20px;
+	width: 90%;
+	max-width: 700px;
+}
+
+.container {
+	display: flex;
+	gap: 10px;
+}
+
+.col {
+	flex-direction: column;
 }
 
 .padded-width {
@@ -23,7 +37,7 @@ h1 {
 }
 
 h2 {
-	background-color: rgb(18, 16, 18);
+	background-color: #121012;
 	padding: 5%;
 	margin: 0;
 	text-align: center;
@@ -35,9 +49,9 @@ h3 {
 }
 
 a {
-	color: rgb(255, 255, 255);
-	background-color: rgb(131, 56, 201);
-	font-weight: 600;
+	color: white;
+	background-color: #7a2ac6;
+	font-weight:700;
 	border-radius: 10px;
 	padding: 5px;
 	line-height: 40px;
@@ -45,7 +59,7 @@ a {
 }
 
 hr {
-	border-color: blueviolet;
+	border-color: #7a2ac6;
 	margin: 0;
 }
 
@@ -53,21 +67,9 @@ hr {
 	text-align: center;
 }
 
-img.large {
-	display: block;
-	width: 100%;
-	height: auto;
-	max-width: 500px;
-	border: 2px solid blueviolet;
+img {
+	min-width: 0;
+	border: 2px solid #7a2ac6;
 	border-radius: 10px;
-	margin-bottom: 20px;
-}
-img.medium {
-	border: 2px solid blueviolet;
-	border-radius: 10px;
-	display: inline-block;
-	width: 48%;
-	height: auto;
-	max-width: 248px;
 	margin-bottom: 20px;
 }
