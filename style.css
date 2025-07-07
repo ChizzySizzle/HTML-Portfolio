@@ -4,17 +4,27 @@ html {
 	color: lavender;
 	background-color: #0f0f10;
 	font-family: "Nunito", sans-serif;
+
+}
+
+body {
 	display: flex;
 	justify-content: center;
 }
 
-body {
+#main {
 	background-color: #1f1821;
 	border: 2px solid #7a2ac6;
 	border-radius: 20px;
-	margin: 20px;
-	width: 90%;
-	max-width: 700px;
+	overflow: hidden;
+	flex: 3;
+	max-width: 750px;
+	margin: 10px;
+}
+
+footer {
+	background-color: #47225a;
+
 }
 
 .container {
@@ -24,6 +34,7 @@ body {
 
 .col {
 	flex-direction: column;
+	gap: 0;
 }
 
 .padded-width {
@@ -37,7 +48,7 @@ h1 {
 }
 
 h2 {
-	background-color: #121012;
+	background-color: #47225a;
 	padding: 5%;
 	margin: 0;
 	text-align: center;
@@ -48,7 +59,7 @@ h3 {
 	margin-top: 5%;
 }
 
-a {
+.main-link {
 	color: white;
 	background-color: #7a2ac6;
 	font-weight:700;
@@ -71,5 +82,39 @@ img {
 	min-width: 0;
 	border: 2px solid #7a2ac6;
 	border-radius: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
+}
+
+@media (max-width:1000px) {
+	#sidebar * {
+		display: none;
+	}
+}
+
+@media (min-width: 1000px) {
+
+	#sidebar {
+		flex: 1;
+		margin: 10px;
+		max-width: 250px;
+		gap: 20px;
+	}
+	
+	.sidebar-menu {
+		background-color: #1f1821;
+		border: 2px solid #7a2ac6;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+
+	.sidebar-link {
+		color: white;
+		background-color: #1f1821;
+		border: 1px solid #7a2ac6;
+		border-width: 1px 0;
+		border-radius: 0;
+		font-weight:700;
+		padding: 10px 5px;
+		text-decoration: none;
+	}
 }
