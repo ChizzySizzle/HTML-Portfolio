@@ -150,7 +150,6 @@ img {
 
 iframe {
 	 width: 80vw; 
-	 max-width: 768px; 
 	 border: 2px solid #7a2ac6;
 	 border-radius: 5px;
 }
