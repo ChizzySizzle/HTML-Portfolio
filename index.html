@@ -1,6 +1,6 @@
 <!--Gabriel Heiser-->
 <!--Created 7/3/2025-->
-<!--Last Updated 7/11/2025-->
+<!--Last Updated 7/13/2025-->
 <!--HTML Document containing the foundation of my portfolio website-->
 
 <!DOCTYPE html>
@@ -8,11 +8,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Portfolio</title>
     <link href="./style.css" rel="stylesheet"/>
     <link rel="apple-touch-icon" sizes="150*150" href="./assets/images/Website-Icon.png"/>
-    <link rel="apple-touch-startup-image" href="./assets/images/Website-Icon.png"/>
   </head>
 
   <body>
@@ -27,8 +25,8 @@
       </div>
       
       <!--########################### BODY #############################-->
-      <div class="body container">
-        <div id="main" class="container col">
+      <div id="main-body" class="container">
+        <div id="main" class="body-container col">
       <!--###################### TITLE AND SUBHEADING SECTION #############################-->
           <h1>Gabriel Heiser's Portfolio</h1>
           <div class="sidebar-content">
@@ -48,24 +46,27 @@
 
           <h2>Current Project:</h2>
           <div class="padded-width">
-            <h3>Escapism (Solo Developer) <a href="./public/escapism-demo.html">Demo</a></h3>
-              <p class="center">Narrative puzzle-horror game made in Unity with C#</p>
-
-              <h4>Highlights:</h4>
-              <ul>
-                <li>Branching dialog system with unique reactions to changes in the environment</li>
-                <li>Object-Oriented puzzle system featuring unique puzzles with randomized answers</li>
-                <li>Self-made pixel art, animations, music, and sound effects</li>
-              </ul>
-            
-              <h4>Images:</h4>
-              <div class="container col">
-                <img src="./assets/images/Escapism1.png" alt="An in game character and a text box containing the words press space to continue dialog"/>
-              </div>
-              <div class="container">
-                <img src="./assets/images/Escapism2.png" alt="The player completing an in game map type puzzle"/>
-                <img src="./assets/images/Escapism3.png" alt="The player completing an in game slider type puzzle"/>
-              </div>
+            <h3>Escapism</h3>
+            <div class="center">
+              <a href="./public/escapism-demo.html">Demo</a>
+            </div>
+            <p class="bold">Solo Developer</p>
+            <p><span class="bold">Description: </span>Narrative puzzle-horror game made in Unity with C#</p>
+            <p class="bold">Highlights:</p>
+            <ul>
+              <li>Branching dialog system with unique reactions to changes in the environment</li>
+              <li>Object-Oriented puzzle system featuring unique puzzles with randomized answers</li>
+              <li>Self-made pixel art, animations, music, and sound effects</li>
+            </ul>
+          
+            <p class="bold">Images:</p>
+            <div class="container col">
+              <img src="./assets/images/Escapism1.png" alt="An in game character and a text box containing the words press space to continue dialog"/>
+            </div>
+            <div class="container">
+              <img src="./assets/images/Escapism2.png" alt="The player completing an in game map type puzzle"/>
+              <img src="./assets/images/Escapism3.png" alt="The player completing an in game slider type puzzle"/>
+            </div>
           </div>
           <hr />
 
@@ -74,26 +75,29 @@
           <div class="padded-width">
           <!--###################### Previous project 1 #############################-->
 
-            <h3>Project M.O.R.Z. (Multiple Developers) <a href="./public/morz-demo.html">Demo</a></h3>
-              <p class="center">Top down action-shooter game made in Gamemaker studio</p>
-
-              <h4>My Contributions:</h4>
-              <ul>
-                <li>Artwork and Sprite design</li>
-                <li>Player movement and actions</li>
-                <li>Player weapons and weapon behavior</li>
-                <li>Tech tree design and function</li>
-                <li>Shooter enemy bahavior</li>
-                <li>Enemy reposition bahavior</li>
-              </ul>
+            <h3>Project M.O.R.Z.</h3>
+            <div class="center">
+              <a class="center" href="./public/morz-demo.html">Demo</a>
+            </div>
+            <p class="bold">Multiple Developers</p>
+            <p><span class="bold">Description: </span>Top down action-shooter game made in Gamemaker studio</p>
+            <p class="bold">My Contributions:</p>
+            <ul>
+              <li>Artwork and Sprite design</li>
+              <li>Player movement and actions</li>
+              <li>Player weapons and weapon behavior</li>
+              <li>Tech tree design and function</li>
+              <li>Shooter enemy bahavior</li>
+              <li>Enemy reposition bahavior</li>
+            </ul>
+            
+            <p class="bold">Images:</p>
+            <div class="container col">
+              <img src="./assets/images/Morz1.png" alt=""/>
+              <img src="./assets/images/Morz2.png" alt=""/>
+              <img src="./assets/images/Morz3.png" alt=""/>
+            </div>
               
-              <h4>Images:</h4>
-              <div class="container col">
-                <img src="./assets/images/Morz1.png" alt=""/>
-                <img src="./assets/images/Morz2.png" alt=""/>
-                <img src="./assets/images/Morz3.png" alt=""/>
-              </div>
-                
           <!--####################### Previous project 2 (WIP) #############################-->
 
           </div>
@@ -101,7 +105,7 @@
           
         <!--###############################   SIDEBAR   ##################################-->
         <div id="sidebar" class="container col">
-          <div class="sidebar-menu">
+          <div class="body-container">
             <h2>Discover:</h2>
             <div class="container col">
               <a href="./public/about.html">About Me</a>
@@ -112,7 +116,7 @@
             </div>
           </div>
 
-          <div class="sidebar-menu">
+          <div class="body-container">
             <h2>External Links:</h2>
             <div class="container col">
               <a href="https://www.linkedin.com/in/gabrielwheiser/">LinkedIn</a>

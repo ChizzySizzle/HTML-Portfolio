@@ -50,6 +50,23 @@ button:active {
 
 /************ Containers and Formatting ***********/
 
+#main-body {
+	justify-content: center;
+	padding: 70px 10px 10px 10px;
+	gap: 0;
+}
+
+.body-container {
+	background-color: #1f1821;
+	border: 2px solid #7a2ac6;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+#main {
+	flex: 0 1 750px;
+}
+
 .grid {
 	display: grid;
 	grid-template-rows: max-content 1fr max-content;
@@ -66,22 +83,6 @@ button:active {
 .col {
 	flex-direction: column;
 	gap: 0;
-}
-
-.body.container {
-	justify-content: center;
-	margin: 0 5px 5px 5px;
-	gap: 0;
-	padding-top: 65px;
-}
-
-#main {
-	background-color: #1f1821;
-	border: 2px solid #7a2ac6;
-	border-radius: 20px;
-	overflow: hidden;
-	flex: 0 1 750px;
-	margin: 10px;
 }
 
 .padded-width {
@@ -104,8 +105,9 @@ h2 {
 }
 
 h3 {
-  	text-align: center;
+	font-size: 1.5rem;
 	margin-top: 30px;
+	text-align: center;
 }
 
 /************ Links ***********/
@@ -182,16 +184,9 @@ footer {
 	}
 
 	#sidebar {
+		margin-left: 10px;
 		flex: 0 1 250px;
-		margin: 10px;
 		gap: 10px;
-	}
-	
-	.sidebar-menu {
-		background-color: #1f1821;
-		border: 2px solid #7a2ac6;
-		border-radius: 20px;
-		overflow: hidden;
 	}
 
 	#sidebar a {
