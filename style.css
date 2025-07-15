@@ -48,6 +48,13 @@ button:active {
 	margin-right: 10%;
 }
 
+.dropdown-btn {
+	border: 0;
+	padding: 0;
+	margin-left: auto;
+	margin-right: 10%;
+}
+
 /************ Containers and Formatting ***********/
 
 #main-body {
@@ -100,16 +107,50 @@ button:active {
 	position: fixed;
 	width: 100%;
 	height: 100vh;
-	justify-content: right;
 }
 
 .menu-container {
 	display: flex;
-	width: 100%;
-	height: min-content;
-	align-items: center;
-	padding-top: 65px;
+	width: 75%;
+	max-width: 400px;
+	height: 100vh;
+	margin-left: auto;
+	padding-top: 60px;
 	background-color: #1f1821;
+	border: 2px solid #7a2ac6;
+}
+
+.menu-item {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 15px 20px;
+	border-bottom: 2px solid #47225a;
+	font-size: 18px;
+}
+
+.menu-item p {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.dropdown-content .menu-item {
+	background-color: #0f0f10;
+}
+
+.dropdown-content {
+	display: none;
+}
+
+.dropdown-content.show {
+	display: flex;
+	flex-direction: column;
+}
+
+.thumbnail-container {
+	display: flex;
+	gap: 5px;
 }
 
 /************ Headings ***********/
@@ -147,12 +188,6 @@ a {
 	line-height: 40px;
 }
 
-#offscreen-menu a {
-	padding: 15px;
-	font-size: 20px;
-	border-bottom: 2px solid #47225a;
-}
-
 hr {
 	border-color: #7a2ac6;
 	margin: 0;
@@ -168,7 +203,7 @@ hr {
 	font-weight: 800;
 }
 
-/************ Images ***********/
+/************ Images / SVG's / Iframe ***********/
 
 img {
 	min-width: 0;
@@ -181,6 +216,11 @@ iframe {
 	 width: 80vw; 
 	 border: 2px solid #7a2ac6;
 	 border-radius: 5px;
+}
+
+.dropdown-btn svg {
+	color: #a654f3;
+	display: block;
 }
 
 /************ Footer ***********/
