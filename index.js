@@ -4,10 +4,12 @@ const menuButton = document.querySelector("#menu-btn");
 function ToggleMenu() {
     if (menu.classList.contains("show")){
         menu.classList.remove("show");
+        document.body.classList.remove("no-scroll");
         menuButton.firstElementChild.innerHTML = "Menu";
     }
     else {
         menu.classList.add("show");
+        document.body.classList.add("no-scroll");
         menuButton.firstElementChild.innerHTML = "Close";
     }
 }

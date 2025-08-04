@@ -48,10 +48,32 @@ button:active {
 	margin-right: 40px;
 }
 
+.no-scroll {
+	overflow: hidden;
+}
+
 .dropdown-btn {
 	border: 0;
 	padding: 0;
 	margin-left: auto;
+}
+
+/************ Scrollbars *************/
+
+::-webkit-scrollbar {
+  width: 12px; /* Width of the vertical scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #3a1c4a; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a654f3; /* Color of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7a2ac6; /* Color of the thumb on hover */
 }
 
 /************ Containers and Formatting ***********/
@@ -97,7 +119,8 @@ button:active {
 .demo-container {
 	display: flex;
 	justify-content: center;
-	gap: 10px;
+	max-width: 80vw;
+	gap: 20px;
 	height: min-content;
 }
 
@@ -124,9 +147,10 @@ button:active {
 }
 
 .menu-container {
+	overflow-y: auto;
 	display: flex;
 	width: 100%;
-	max-width: 400px;
+	max-width: 480px;
 	height: 100vh;
 	margin-left: auto;
 	padding-top: 60px;
@@ -202,7 +226,7 @@ a {
 }
 
 hr {
-	border-color: #7a2ac6;
+	border: 1px solid #7a2ac6;
 	margin: 0;
 }
 
@@ -222,7 +246,7 @@ img {
 	min-width: 0;
 	border: 2px solid #7a2ac6;
 	border-radius: 10px;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 iframe {
@@ -230,6 +254,7 @@ iframe {
 	max-width: 750px;
 	border: 2px solid #7a2ac6;
 	border-radius: 5px;
+	margin-bottom: 10px;
 }
 
 .dropdown-btn svg {
@@ -245,7 +270,23 @@ footer {
 	padding: 10px 5%;
 }
 
-@media (max-width:992px) {
+@media (max-width: 480px) {
+	.menu-container {
+		border-left: 0;
+	}
+
+	.menu-item {
+		justify-content: center;
+	}
+
+	.dropdown-btn {
+		border: 0;
+		padding: 0;
+		margin-left: 20px;
+	}
+}
+
+@media (max-width: 992px) {
 	#sidebar * {
 		display: none;
 	}
@@ -263,18 +304,20 @@ footer {
 	}
 
 	#sidebar {
+		position: fixed;
+		left: 0;
 		display: flex;
 		position: fixed;
-		width: 100%;
+		width: 300px;
 		height: 100vh;
 	}
 
 	.sidebar-container {
+		overflow-y: auto;
 		display: flex;
-		width: 75%;
-		width: 300px;
+		width: 100%;
 		height: 100vh;
-		margin-right: auto;
+		padding-top: 60px;
 		background-color: #1f1821;
 		border-right: 2px solid #7a2ac6;
 	}
@@ -287,8 +330,8 @@ footer {
 		margin-left: 300px;
 	}
 
-	#demo {
-		margin-left: 300px;
+	.demo-container {
+		max-width: 60vw;
 	}
 
 	footer {
