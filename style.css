@@ -319,6 +319,7 @@ footer {
 		padding-top: 60px;
 		background-color: #1f1821;
 		border-right: 2px solid #7a2ac6;
+		border-left: 0;
 	}
 
 	iframe {
