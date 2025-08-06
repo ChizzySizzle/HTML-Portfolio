@@ -1,4 +1,4 @@
-const menu = document.querySelector("#offscreen-menu");
+const menu = document.querySelector("#menu");
 const menuButton = document.querySelector("#menu-btn");
 
 function ToggleMenu() {
