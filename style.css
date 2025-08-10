@@ -70,6 +70,8 @@ button:active {
 
 ::-webkit-scrollbar-thumb {
   background: #a654f3; /* Color of the thumb */
+  border: 3px solid #3a1c4a;
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -227,6 +229,10 @@ hr {
 
 .center {
 	text-align: center;
+}
+
+.justify {
+	text-align: justify;
 }
 
 .bold {
