@@ -1,5 +1,7 @@
 const menu = document.querySelector("#menu");
 const menuButton = document.querySelector("#menu-btn");
+const carousel = document.querySelector('.thumbnail-container');
+const images = carousel.querySelectorAll('img');
 
 function ToggleMenu() {
     if (menu.classList.contains("show")){
@@ -38,5 +40,20 @@ function ChangeImage(thumbnail, newImage) {
         sibling = sibling.nextSibling;
     }
 }
+
+images.forEach(img => {
+  img.addEventListener('click', () => {
+    const containerWidth = carousel.offsetWidth;
+    const imgWidth = img.offsetWidth;
+    const imgLeft = img.offsetLeft;
+
+    const scrollPosition = imgLeft - (containerWidth / 2) + (imgWidth / 2);
+
+    carousel.scrollTo({
+      left: scrollPosition,
+      behavior: 'smooth'
+    });
+  });
+});
 
 menuButton.addEventListener("click", ToggleMenu);
