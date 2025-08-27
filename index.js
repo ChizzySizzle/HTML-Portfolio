@@ -1,7 +1,9 @@
 const menu = document.querySelector("#menu");
 const menuButton = document.querySelector("#menu-btn");
 const carousel = document.querySelector('.thumbnail-container');
-const images = carousel.querySelectorAll('img');
+const images = carousel ? carousel.querySelectorAll('img') : [];
+
+menuButton.addEventListener("click", ToggleMenu);
 
 function ToggleMenu() {
     if (menu.classList.contains("show")){
@@ -55,5 +57,3 @@ images.forEach(img => {
     });
   });
 });
-
-menuButton.addEventListener("click", ToggleMenu);
