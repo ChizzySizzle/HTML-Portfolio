@@ -13,10 +13,11 @@
     <link rel="apple-touch-icon" sizes="150*150" href="./assets/images/Website-Icon.png"/>
   </head>
 
-  <body>
+  <body onload="getPics()">
+    <div id="fullpage" onclick="this.style.display='none';"></div>
     <div class="grid">
       <!--###################### HEADER #############################-->
-      <div style="z-index: 10;" >
+      <div style="z-index: 1;" >
         <div id="menu" class="container col">
           <div class="menu-container col">
             <a class="menu-item" href="./public/about.html">About Me</a>

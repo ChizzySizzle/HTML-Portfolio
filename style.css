@@ -159,6 +159,7 @@ button:active {
 	padding: 15px 20px;
 	border-bottom: 2px solid #47225a;
 	font-size: 18px;
+	cursor: pointer;
 }
 
 .menu-item p {
@@ -266,6 +267,7 @@ iframe {
 .dropdown-btn svg {
 	color: #a654f3;
 	display: block;
+	cursor: pointer;
 }
 
 /************ Footer ***********/
@@ -377,8 +379,7 @@ footer {
 	}
 
 	.thumbnail-container img {
-		flex: 0 0 49%;
-		cursor: default;
+		flex: 0 0 48%;
 	}
 
 	.darken {
@@ -395,5 +396,20 @@ footer {
 
 	a {
 		font-size: large;
+	}
+
+	#fullpage {
+		display: none;
+		position: fixed;
+		z-index: 9999;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-size: 50%;
+		background-repeat: no-repeat no-repeat;
+		background-position: center center;
+		background-color: rgba(0, 0, 0, 0.7);
+		cursor: pointer;
 	}
 }
