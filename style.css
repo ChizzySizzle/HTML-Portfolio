@@ -95,7 +95,7 @@ button:active {
 
 #main {
 	margin-top: 10px;
-	flex: 0 1 750px;
+	flex: 0 1 1200px;
 }
 
 .grid {
@@ -276,6 +276,10 @@ footer {
 	padding: 10px 5%;
 }
 
+.darken {
+	filter: brightness(50%);
+}
+
 /*********** Media Queries **********/
 
 /*********** Small **********/
@@ -299,6 +303,14 @@ footer {
 @media (min-width: 768px) {
 	h1 {
 		font-size: 3rem;
+	}
+
+	.padded-width {
+		padding: 0 15%;
+	}
+
+	#main-body {
+		margin: 0 5%;
 	}
 }
 
@@ -349,5 +361,39 @@ footer {
 
 	footer {
 		margin-left: 300px;
+	}
+
+	.padded-width {
+		padding: 0 10%;
+	}
+
+	.main-image {
+		display: none;
+	}
+
+	.thumbnail-container {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.thumbnail-container img {
+		flex: 0 0 49%;
+		cursor: default;
+	}
+
+	.darken {
+		filter: brightness(100%);
+	}
+
+	p {
+		font-size: large;
+	}
+
+	li {
+		font-size: large;
+	}
+
+	a {
+		font-size: large;
 	}
 }

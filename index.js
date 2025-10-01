@@ -31,13 +31,13 @@ function ToggleDropdown(dropdown) {
 
 function ChangeImage(thumbnail, newImage) {
     thumbnail.parentElement.parentElement.firstElementChild.src = newImage;
-    thumbnail.style = "filter: brightness(50%)";
+    thumbnail.classList.add("darken");
     
     let sibling  = thumbnail.parentElement.firstElementChild;
     
     while (sibling) {
         if (sibling.nodeType === 1 && sibling !== thumbnail) {
-            sibling.style = "filter: brightness(100%)";
+            sibling.classList.remove("darken");
         }
         sibling = sibling.nextSibling;
     }
