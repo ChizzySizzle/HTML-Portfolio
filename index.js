@@ -1,8 +1,16 @@
-const menu = document.querySelector("#menu");
-const menuButton = document.querySelector("#menu-btn");
-const carousel = document.querySelector('.thumbnail-container');
-const images = carousel ? carousel.querySelectorAll('img') : [];
 
+function SetupMenu() {
+  // Example: menu button toggle
+  const menu = document.getElementById("menu");
+
+  if (menuBtn && menu) {
+    menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("open"); // or whatever your class toggle is
+    });
+  }
+}
+
+const menuButton = document.querySelector("#menu-btn");
 menuButton.addEventListener("click", ToggleMenu);
 
 function ToggleMenu() {
@@ -43,6 +51,9 @@ function ChangeImage(thumbnail, newImage) {
     }
 }
 
+const carousel = document.querySelector('.thumbnail-container');
+const images = carousel ? carousel.querySelectorAll('img') : [];
+
 images.forEach(img => {
   img.addEventListener('click', () => {
     const containerWidth = carousel.offsetWidth;
@@ -58,9 +69,7 @@ images.forEach(img => {
   });
 });
 
-
-
-function getPics() {} //just for this demo
+function getPics() {}
 const imgs = document.querySelectorAll('.thumbnail-container img');
 const fullPage = document.querySelector('#fullpage');
 
