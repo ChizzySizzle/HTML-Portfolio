@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escapism Demo</title>
+    <link href="/style.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <div class="grid">
+      <!--###################### HEADER #############################-->
+      <div style="z-index: 1;" >
+
+        <!-- MENU -->
+        <div id="menu-placeholder"></div>
+          <script>
+            fetch("./menu.html")
+              .then(res => res.text())
+              .then(data => {
+                document.getElementById("menu-placeholder").innerHTML = data;
+                SetupMenu();
+              });
+          </script>
+
+        <header>
+          <div><a href="../index.html">Home</a></div>
+          <div style="height:inherit; width:100%; display:flexbox; justify-items:center;"><div><a>Gabriel Heiser</a></div></div>
+          <div id="menu-btn"><button>Menu</button></div>
+        </header>
+      </div>
+      
+      <!--########################### BODY #############################-->
+      <div id="main-body" class="container">
+        <div id="main" class="demo-container col">
+          <iframe src="./GameFiles/MORZ-Purge-web/index.html" style="aspect-ratio: 4/3; max-width: 768px;"></iframe>
+
+          <div class="body-container">
+            <h2>M.O.R.Z. Purge</h2>
+            <div class="padded-width">
+              <p class="justify">
+                <span class="bold">M.O.R.Z. Purge</span> is an action-packed sci-fi first-person shooter. 
+                <br>
+                The Human Planetary Services Corporation (H.P.S.) was in the process of collecting resources through mining 
+                operations on a newly found planet, Zorapterra, when they breached into an unknown alien-inhabited section of 
+                cave. These bug-like aliens ravaged the humans and continue to prevent any further resource collection on the 
+                planet. H.P.S. has given you, the player, the orders to completely clear out the alien-infested cave system on 
+                planet Zorapterra and reclaim the resources that are rightfully ours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <footer>
+          <p>This website was made from scratch using HTML, CSS, and Javascript.</p>
+          <p>© Gabriel Heiser. All rights reserved.</p>
+        </footer>
+      </div>
+    <script src="../index.js" charset="utf-8"></script>
+  </body>
+</html>

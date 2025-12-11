@@ -1,28 +1,27 @@
+const menuBtn = document.querySelector("#menu-btn");
 
-function SetupMenu() {
-  // Example: menu button toggle
-  const menu = document.getElementById("menu");
+// function SetupMenu() {
+//   const menu = document.getElementById("menu");
 
-  if (menuBtn && menu) {
-    menuBtn.addEventListener("click", () => {
-      menu.classList.toggle("open"); // or whatever your class toggle is
-    });
-  }
-}
+//   if (menuBtn && menu) {
+//     menuBtn.addEventListener("click", () => {
+//       menu.classList.toggle("open");
+//     });
+//   }
+// }
 
-const menuButton = document.querySelector("#menu-btn");
-menuButton.addEventListener("click", ToggleMenu);
+menuBtn.addEventListener("click", ToggleMenu);
 
 function ToggleMenu() {
     if (menu.classList.contains("show")){
         menu.classList.remove("show");
         document.body.classList.remove("no-scroll");
-        menuButton.firstElementChild.innerHTML = "Menu";
+        menuBtn.firstElementChild.innerHTML = "Menu";
     }
     else {
         menu.classList.add("show");
         document.body.classList.add("no-scroll");
-        menuButton.firstElementChild.innerHTML = "Close";
+        menuBtn.firstElementChild.innerHTML = "Close";
     }
 }
 
