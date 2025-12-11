@@ -1,14 +1,14 @@
 const menuBtn = document.querySelector("#menu-btn");
 
-// function SetupMenu() {
-//   const menu = document.getElementById("menu");
+function SetupMenu() {
+  const menu = document.getElementById("menu");
 
-//   if (menuBtn && menu) {
-//     menuBtn.addEventListener("click", () => {
-//       menu.classList.toggle("open");
-//     });
-//   }
-// }
+  if (menuBtn && menu) {
+    menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("open");
+    });
+  }
+}
 
 menuBtn.addEventListener("click", ToggleMenu);
 
