@@ -5,24 +5,9 @@ function SetupMenu() {
 
   if (menuBtn && menu) {
     menuBtn.addEventListener("click", () => {
-      menu.classList.toggle("open");
+      menu.classList.toggle("show");
     });
   }
-}
-
-menuBtn.addEventListener("click", ToggleMenu);
-
-function ToggleMenu() {
-    if (menu.classList.contains("show")){
-        menu.classList.remove("show");
-        document.body.classList.remove("no-scroll");
-        menuBtn.firstElementChild.innerHTML = "Menu";
-    }
-    else {
-        menu.classList.add("show");
-        document.body.classList.add("no-scroll");
-        menuBtn.firstElementChild.innerHTML = "Close";
-    }
 }
 
 function ToggleDropdown(dropdown) {
